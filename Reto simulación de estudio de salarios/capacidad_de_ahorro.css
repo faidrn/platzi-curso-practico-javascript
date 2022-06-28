@@ -1,0 +1,71 @@
+/* 
+[Video 22] Reto: simulación de estudio de salarios
+ */
+
+ *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Mitr', sans-serif;
+}
+
+body{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #EBF5FB;
+}
+
+.container{
+    border: 1px solid #95A5A6;
+    width:30vw;
+    border-radius: 25px;
+    margin-top: 5vw;
+}
+
+header, section{
+    margin: 2vw;
+}
+
+header p{
+    font-weight: lighter;
+}
+
+h1{
+    font-size: 2vw;
+    color: #F39C12;
+}
+
+h2{
+    color: #52BE80;
+    font-size: 1.5vw;
+}
+
+form{
+    margin-top: 5vh;
+}
+
+section label{
+    font-weight: lighter;
+}
+
+section input{
+    width: 25vw;
+    height: 3vh;
+    font-weight: lighter;
+    margin-bottom: 2vh;
+}
+
+
+section button{
+    margin-top: 3vh;
+    width: 25vw;
+    height: 6vh;
+    border-radius: 50px;
+    background: #3498DB;
+    border-color: #3498DB;
+    color: white;
+}
+
+section p{
+    margin-top: 3vh;
+}

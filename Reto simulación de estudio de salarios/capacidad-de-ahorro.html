@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto: simulación de estudio de salarios</title>
+    <link rel="stylesheet" href="./capacidad_de_ahorro.css">
+</head>
+<body>
+    <div class="container">
+        <!-- [Video 22] Reto: simulación de estudio de salarios -->
+        <header>
+            <h1>CAPACIDAD DE AHORRO</h1>
+    
+            <p>Reto: simulaci&oacute;n de estudio de salarios del curso Pr&aacute;ctico de JavaScript</p>
+        </header>
+        
+        <section>
+            <h2>
+                Calcula la posibilidad que tienes de separar un porcentaje de tus ingresos y reservarlo para su uso en el futuro
+            </h2>
+    
+            <form>
+                <label for="InputIncome">Escribe el total de tus ingresos: </label>
+                <input type="number" id="InputIncome">
+
+                <label for="InputExpenses">Escribe el total de tus egresos: </label>
+                <input type="number" id="InputExpenses">
+                
+                <div id="savingCapacityOk" class="correcto"></div>
+                <div id="savingCapacityNotOk" class="error"></div>
+                <div id="savingCapacityMightImprove" class="ojo"></div>
+                
+                <div class="savings-capacity-tips">
+                    
+                </div>
+    
+                <button type="button" onclick="calculateSavingCapacity()">
+                    Calcular
+                </button>
+    
+                
+            </form>
+        </section>
+    </div>
+
+    <!-- <script src="./presupuesto.js"></script> -->
+    <script src="./analisis.js"></script>
+</body>
+</html>
