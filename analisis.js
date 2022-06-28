@@ -2,21 +2,9 @@
 [Video 20] Calculando la mediana de salarios
 */
 
-const salariosCol = colombia.map(
-    //funcion anonima, q permite iterar por cada persona del array de salarios(colombia)
-    function(personita){
-        //crea un array de salarios por cada persona
-        return personita.salary;
-    }
-);
-
-//ordenamos los salarios de menor a mayor
-const salariosColSorted = salariosCol.sort(
-    function(salaryA, salaryB){
-        return salaryA - salaryB;
-    }
-);
-
+// Helpers
+/*las funciones helpers son funciones q no son parte de la 
+logica del negocio (del analisis q se hace), pero se necesitan en el algorito*/
 function esPar(numerito){
     //retorna true o false
     return (numerito % 2 === 0);
@@ -34,6 +22,7 @@ function calcularMediaAritmetica(lista){
     return promedioLista;
 }
 
+//Calculadore de mediana
 function medianaSalarios(lista){
     const mitad = parseInt(lista.length / 2); //quitamos los decimales al resultado
 
@@ -53,7 +42,46 @@ function medianaSalarios(lista){
     }
 }
 
+// Mediana general
+const salariosCol = colombia.map(
+    //funcion anonima, q permite iterar por cada persona del array de salarios(colombia)
+    function(personita){
+        //crea un array de salarios por cada persona
+        return personita.salary;
+    }
+);
+
+//ordenamos los salarios de menor a mayor
+const salariosColSorted = salariosCol.sort(
+    function(salaryA, salaryB){
+        return salaryA - salaryB;
+    }
+);
+
+/*console.log(
+    medianaSalarios(salariosColSorted)
+);*/
+
+/*
+[Video 21] Calculando el top 10% de salarios
+*/
+
+const medianaGeneral = medianaSalarios(salariosColSorted);
+
+//Mediana del top 10%
+const spliceStart = (salariosColSorted.length * 90) / 100; //90%
+const spliceCount = salariosColSorted.length - spliceStart;  //10%
+
+/*el metodo splice(posicion de inicio, cantidad de elementos a sacar), corta del array la cantidad de elementos indicados, 
+iniciando en la posicion indicada*/
+const salariosColTop10 = salariosColSorted.splice(
+    spliceStart, 
+    spliceCount
+);
+
+const medianaTop10Col = medianaSalarios(salariosColTop10);
 
 console.log(
-    medianaSalarios(salariosColSorted)
+    medianaGeneral, 
+    medianaTop10Col
 );
