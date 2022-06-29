@@ -131,8 +131,8 @@ button{
 	}
 	
 	.saving-capacity {
-		width: 47vw;
-		height: 33vh;
+		width: 50vw;
+		height: 37vh;
 	}
 	
 	.incomes {
@@ -140,7 +140,7 @@ button{
 	}
 	
 	.expenses {
-		transform: translateY(56vw) translateX(21vw);
+		transform: translateY(61vw) translateX(21vw);
 	}
 	
 	form{
@@ -148,6 +148,24 @@ button{
 	}
 	
 	h3{
+		font-size: 6vw;
+	}
+	
+	label {
+		font-size: 4vw;
+	}
+	
+	input, select {
+		width: 35vw;
+		height: 4vh;
+		font-size: 3vw;
+	}
+	
+	button {
+		margin-top: 0vh;
+		width: 30vw;
 		font-size: 4vw;
 	}
 }
+
+@media screen and (max-width: 500px) {}
