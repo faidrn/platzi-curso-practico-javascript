@@ -2,7 +2,17 @@
 [Video 22] Reto: simulación de estudio de salarios
  */
 
- *{
+
+
+/* POSITIONS */
+
+.absolute {
+    position: absolute;
+  }
+
+/* MAIN STRUCTURE */
+
+*{
     padding: 0;
     margin: 0;
     font-family: 'Mitr', sans-serif;
@@ -29,7 +39,7 @@ header{
     margin-bottom: 3vw;
 }
 
-header p{
+.introduction-paragraph{
     font-weight: lighter;
     margin-top: 1vw;
     margin-bottom: 1vw;
@@ -55,19 +65,19 @@ h2{
 }
 
 .incomes{
-    transform: translateX(18vw);
+    transform: translateX(18vw) translateY(-3vw);
     
 }
 
 .expenses{
-    transform: translateY(-25.83vw) translateX(47vw);
+    transform:  translateY(-3vw) translateX(47vw);
 }
 
 form{
     display: grid;
     place-items: center;
     justify-content: center;
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 
 h3{
@@ -99,32 +109,45 @@ button{
     border: 1px solid #3498DB;
     color: white;
 }
-/* form{
-    margin-top: 5vh;
+
+@media screen and (max-width: 912px) {
+	.container{
+		margin-top: 4vw;
+	}
+	
+	h1 {
+		font-size: 6vw;
+	}
+	
+	.introduction-paragraph{
+		font-size: 4vw;
+		text-align: center;
+		margin-top: 2vw;
+    	margin-bottom: 2vw;
+	}
+	
+	h2{
+		font-size: 4vw;
+	}
+	
+	.saving-capacity {
+		width: 47vw;
+		height: 33vh;
+	}
+	
+	.incomes {
+		transform: translateX(21vw) translateY(0vw);
+	}
+	
+	.expenses {
+		transform: translateY(56vw) translateX(21vw);
+	}
+	
+	form{
+		margin-top: 3vw;
+	}
+	
+	h3{
+		font-size: 4vw;
+	}
 }
-
-section label{
-    font-weight: lighter;
-}
-
-section input{
-    width: 25vw;
-    height: 3vh;
-    font-weight: lighter;
-    margin-bottom: 2vh;
-}
-
-
-section button{
-    margin-top: 3vh;
-    width: 25vw;
-    height: 6vh;
-    border-radius: 50px;
-    background: #3498DB;
-    border-color: #3498DB;
-    color: white;
-}
-
-section p{
-    margin-top: 3vh;
-} */
