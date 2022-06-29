@@ -16,18 +16,23 @@ body{
 }
 
 .container{
-    border: 1px solid #95A5A6;
-    width:30vw;
-    border-radius: 25px;
-    margin-top: 5vw;
+    width:90vw;
+    margin-top: 1vw;
+    height: 86vh;
 }
 
-header, section{
-    margin: 2vw;
+header{
+    margin-top: 2vw;
+    display: grid;
+    place-items: center;
+    /*justify-content: center; */
+    margin-bottom: 3vw;
 }
 
 header p{
     font-weight: lighter;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
 
 h1{
@@ -40,7 +45,61 @@ h2{
     font-size: 1.5vw;
 }
 
+.saving-capacity{
+    border: 1px solid #95A5A6;
+    border-radius: 25px;
+    width: 22vw;
+    height: 46vh;
+    margin-top: 2vw;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.incomes{
+    transform: translateX(18vw);
+    
+}
+
+.expenses{
+    transform: translateY(-25.83vw) translateX(47vw);
+}
+
 form{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+}
+
+h3{
+    font-size: 2vw;
+    margin-bottom: 2vw;
+}
+
+label{
+    font-size: 1.5vw;
+    margin-bottom: 1vh;
+}
+
+input, 
+select{
+    width: 13vw;
+    height: 5vh;
+    font-weight: lighter;
+    margin-bottom: 2vh;
+    border-radius: 12px;
+    border: 1px solid #EAECEE;
+}
+
+button{
+    margin-top: 2vh;
+    width: 13vw;
+    height: 5vh;
+    border-radius: 50px;
+    background: #3498DB;
+    border: 1px solid #3498DB;
+    color: white;
+}
+/* form{
     margin-top: 5vh;
 }
 
@@ -68,4 +127,4 @@ section button{
 
 section p{
     margin-top: 3vh;
-}
+} */
