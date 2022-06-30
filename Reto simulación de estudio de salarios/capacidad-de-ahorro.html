@@ -38,14 +38,6 @@
 
                     <label for="InputIncome">Ingreso</label>
                     <input type="number" id="InputIncome">
-                    
-                    <!-- <div id="savingCapacityOk" class="correcto"></div>
-                    <div id="savingCapacityNotOk" class="error"></div>
-                    <div id="savingCapacityMightImprove" class="ojo"></div>
-                    
-                    <div class="savings-capacity-tips">
-                        
-                    </div> -->
         
                     <button type="button" onclick="calculateSavingCapacity()">
                         Agregar
@@ -67,9 +59,9 @@
                         <option value="Formacion">Formaci&oacute;n</option>
                         <option value="Ocio">Ocio</option>
                     </select>
+					
                     <label for="InputExpenses">Egreso</label>
                     <input type="number" id="InputExpenses">
-                    
         
                     <button type="button" onclick="calculateSavingCapacity()">
                         Agregar
@@ -79,10 +71,55 @@
                 </form>
             </section>
         </div>
-    </div>
+		
+		<div class="result-content">
+			<div class="center">
+				<div class="residue">
+					<p class="paragraph-residue"><strong>Saldo:</strong> <span id="resultResidue">$ 500.000</span></p>
+				</div>
+			</div>
+			
+			<div class="alerts">
+				<div id="savingCapacityOk" class="alert-success alert">
+					<strong>¡Felicidades!</strong> Puedes ahorrar el <span id="percentSavings">% de tus ingresos</span>
+				</div>
+				<div id="savingCapacityNotOk" class="alert-danger alert">
+					<strong>¡Malas noticias!</strong> No tienes capacidad de ahorro
+				</div>
+				<div id="savingCapacityMightImprove" class="alert-warning alert">
+					<strong>¡Alerta!</strong> No tienes capacidad de ahorro, pero puedes mejorar
+				</div>
+			</div>
+			
+			<div class="tips center">
+				<div class="savings-capacity-tips">
+					<h2 class="alert alert-info">Concejos</h2>
 
-    <div class="result-content">
-        <p id="ResultPrice"></p>
+					<p>Puedes seguir estos pasos para empezar tu ahorro: </p>
+					
+					<ul>
+						<li>
+							<strong>Consulta tu presupuesto:</strong> este es y será la hoja de ruta de tus finanzas. Revisa si ya has incluido todos los gastos o falta algo, si los montos han cambiado. Mantenlo siempre actualizado. 
+						</li>
+						<li>
+							<strong>Tienes superávit?:</strong>¿ resta los egresos de los ingresos y si te queda dinero, entonces tienes capacidad de ahorro. 
+						</li>
+						<li>
+							<strong>¿Tienes déficit?:</strong> haz el mismo cálculo anterior y si no te queda dinero o te falta para cubrir los gastos, entonces no cuentas con capacidad de ahorro. Pero, ¡alto! no te desanimes, revisa nuevamente tus finanzas. 
+						</li>
+						<li>
+							<strong>Revisa tus gastos:</strong> el déficit puede ser provocado por un mal manejo de las finanzas; y, no, porque los ingresos no te permitan ahorrar. Revisa tus gastos fijos y variables. Normalmente, en los variables podrás encontrar los gastos hormiga, que tanto afectan la solvencia económica. En los gastos fijos, quizá encuentres suscripciones de pago que ya no usas o que ya no necesitas.
+						</li>
+						<li>
+							<strong>Elige un método de ahorro:</strong> si quieres desarrollar la cultura del ahorro en tu hogar, te recomendamos escoger un método que te permita ser constante y disciplinado y visualizar tus objetivos a futuro. 
+						</li>
+						<li>
+							<strong>Práctica buenos hábitos:</strong> para incrementar tu capacidad de ahorro es fundamental que incluyas buenos hábitos de ahorro en tu día a día. ¡El efecto sobre tus finanzas es inmediato!
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
     </div>
 
     <!-- <script src="./presupuesto.js"></script> -->
