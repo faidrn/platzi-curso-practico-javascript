@@ -29,6 +29,9 @@ body{
     width:90vw;
     margin-top: 1vw;
     height: 86vh;
+    display: grid;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 header{
@@ -55,6 +58,13 @@ h2{
     font-size: 1.5vw;
 }
 
+.insert-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90vw;
+}
+
 .saving-capacity{
     border: 1px solid #95A5A6;
     border-radius: 25px;
@@ -65,12 +75,12 @@ h2{
 }
 
 .incomes{
-    transform: translateX(18vw) translateY(-3vw);
+    /* transform: translateX(18vw) translateY(-3vw); */
     
 }
 
 .expenses{
-    transform:  translateY(-3vw) translateX(47vw);
+    /* transform:  translateY(-3vw) translateX(47vw); */
 }
 
 form{
@@ -120,52 +130,61 @@ button{
 	}
 	
 	.introduction-paragraph{
-		font-size: 4vw;
+		font-size: 5vw;
 		text-align: center;
-		margin-top: 2vw;
-    	margin-bottom: 2vw;
+		margin-top: 3vw;
+    	margin-bottom: 3vw;
 	}
 	
 	h2{
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 	
+    .insert-content{
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
+    }
+
 	.saving-capacity {
-		width: 50vw;
+		width: 60vw;
 		height: 37vh;
 	}
 	
 	.incomes {
-		transform: translateX(21vw) translateY(0vw);
+		/* transform: translateX(21vw) translateY(0vw); */
+        margin-bottom: 6vw;
 	}
 	
-	.expenses {
+	/*.expenses {
 		transform: translateY(61vw) translateX(21vw);
-	}
+	}*/
 	
 	form{
-		margin-top: 3vw;
+		margin-top: 5vw;
 	}
 	
 	h3{
 		font-size: 6vw;
+        margin-bottom: 4vw;
 	}
 	
 	label {
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 	
 	input, select {
-		width: 35vw;
+		width: 45vw;
 		height: 4vh;
-		font-size: 3vw;
+		font-size: 4vw;
 	}
 	
 	button {
-		margin-top: 0vh;
-		width: 30vw;
-		font-size: 4vw;
-	}
+		margin-top: 1vh;
+		width: 35vw;
+		font-size: 4.5vw;
+	} 
 }
 
 @media screen and (max-width: 500px) {}
