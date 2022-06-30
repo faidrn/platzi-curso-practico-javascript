@@ -2,10 +2,6 @@
 [Video 22] Reto: simulación de estudio de salarios
  */
 
-/* 
-[Video 22] Reto: simulación de estudio de salarios
- */
-
 
 
 /* POSITIONS */
@@ -150,6 +146,7 @@ button{
 	width: 35vw;
 	display: grid;
 	align-items: center;
+	justify-content: center;
 	margin-top: 2vw;
 }
 
@@ -185,6 +182,67 @@ button{
   background-color: #d1ecf1;
   border-color: #bee5eb;
 }
+
+.savings-capacity-tips{
+	width: 90vw;
+	margin-top: 3vw;
+}
+
+.title-tips{
+	margin-bottom: 2vw;
+	color: #0c5460;
+}
+
+.paragraph-tips{
+	margin-bottom: 2vw;	
+}
+
+/***ACOORDEON***/
+.acordeon{
+	width: 70%;
+	max-width: 90vw;
+	padding: 2em;
+	border-radius: 25px;
+	background-color: #D6DBDF;
+}
+
+.acordeon .bloque{
+	background-color: #AAB7B8;
+	margin-bottom: 1em;
+	padding: 1em;
+	border-radius: 25px;
+}
+
+.acordeon .h2{
+	background-color: #BDC3C7;
+	margin-bottom: 1em;
+	padding: 1vw;
+	border-radius: 15px;
+	color: #0c5460;
+}
+
+.acordeon .contenido{
+	height: 0;
+	background-color: #D6DBDF;
+	padding: 0em;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #0c5460;
+	overflow: hidden; /*ocultar el contenido*/
+	transition: all .5s ease; /*animmacion de abrir y cerrar*/
+}
+
+.content-text-accordion{
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+
+.acordeon .bloque.activo .contenido{
+	height: 6vw;
+}
+/***ACOORDEON***/
 
 @media screen and (max-width: 912px) {
 	.container{
@@ -270,191 +328,21 @@ button{
 	.alert{
 		font-size: 4vw;
 	}
-}
-
-@media screen and (max-width: 500px) {}
-
-/* POSITIONS */
-
-.absolute {
-    position: absolute;
-  }
-
-/* MAIN STRUCTURE */
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Mitr', sans-serif;
-}
-
-body{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    background: #EBF5FB;
-}
-
-.container{
-    width:90vw;
-    margin-top: 1vw;
-    height: 86vh;
-    display: grid;
-    /* align-items: center; */
-    justify-content: center;
-}
-
-header{
-    margin-top: 2vw;
-    display: grid;
-    place-items: center;
-    /*justify-content: center; */
-    margin-bottom: 3vw;
-}
-
-.introduction-paragraph{
-    font-weight: lighter;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-}
-
-h1{
-    font-size: 2vw;
-    color: #F39C12;
-}
-
-h2{
-    color: #52BE80;
-    font-size: 1.5vw;
-}
-
-.insert-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 90vw;
-}
-
-.saving-capacity{
-    border: 1px solid #95A5A6;
-    border-radius: 25px;
-    width: 22vw;
-    height: 46vh;
-    margin-top: 2vw;
-    box-shadow: 2px 2px 5px #999;
-}
-
-.incomes{
-    /* transform: translateX(18vw) translateY(-3vw); */
-    
-}
-
-.expenses{
-    /* transform:  translateY(-3vw) translateX(47vw); */
-}
-
-form{
-    display: grid;
-    place-items: center;
-    justify-content: center;
-    margin-top: 1vw;
-}
-
-h3{
-    font-size: 2vw;
-    margin-bottom: 2vw;
-}
-
-label{
-    font-size: 1.5vw;
-    margin-bottom: 1vh;
-}
-
-input, 
-select{
-    width: 13vw;
-    height: 5vh;
-    font-weight: lighter;
-    margin-bottom: 2vh;
-    border-radius: 12px;
-    border: 1px solid #EAECEE;
-}
-
-button{
-    margin-top: 2vh;
-    width: 13vw;
-    height: 5vh;
-    border-radius: 50px;
-    background: #3498DB;
-    border: 1px solid #3498DB;
-    color: white;
-}
-
-@media screen and (max-width: 912px) {
-	.container{
-		margin-top: 4vw;
-	}
 	
-	h1 {
-		font-size: 6vw;
-	}
-	
-	.introduction-paragraph{
+	/***ACOORDEON***/
+	.paragraph-tips {
 		font-size: 5vw;
 		text-align: center;
-		margin-top: 3vw;
-    	margin-bottom: 3vw;
 	}
 	
-	h2{
-		font-size: 5vw;
-	}
-	
-    .insert-content{
-        /* display: flex; */
-        flex-direction: column;
-        align-items: center;
-        margin-top: 3vw;
-    }
-
-	.saving-capacity {
-		width: 60vw;
-		height: 37vh;
-	}
-	
-	.incomes {
-		/* transform: translateX(21vw) translateY(0vw); */
-        margin-bottom: 6vw;
-	}
-	
-	/*.expenses {
-		transform: translateY(61vw) translateX(21vw);
-	}*/
-	
-	form{
-		margin-top: 5vw;
-	}
-	
-	h3{
-		font-size: 6vw;
-        margin-bottom: 4vw;
-	}
-	
-	label {
-		font-size: 5vw;
-	}
-	
-	input, select {
-		width: 45vw;
-		height: 4vh;
+	.content-text-accordion {
 		font-size: 4vw;
 	}
 	
-	button {
-		margin-top: 1vh;
-		width: 35vw;
-		font-size: 4.5vw;
-	} 
+	.acordeon .bloque.activo .contenido {
+		height: 20vw;
+	}
+	/***ACOORDEON***/
 }
 
 @media screen and (max-width: 500px) {}
