@@ -76,7 +76,7 @@ h2{
     border-radius: 25px;
     width: 22vw;
     height: 46vh;
-    margin-top: 2vw;
+    margin-top: 0vw;
     box-shadow: 2px 2px 5px #999;
 }
 
@@ -97,8 +97,8 @@ label{
     margin-bottom: 1vh;
 }
 
-input, 
-select{
+.input, 
+.select{
     width: 13vw;
     height: 5vh;
     font-weight: lighter;
@@ -107,7 +107,7 @@ select{
     border: 1px solid #EAECEE;
 }
 
-button{
+.button{
     margin-top: 2vh;
     width: 13vw;
     height: 5vh;
@@ -298,13 +298,13 @@ button{
 		font-size: 5vw;
 	}
 	
-	input, select {
+	.input, .select {
 		width: 45vw;
 		height: 4vh;
 		font-size: 4vw;
 	}
 	
-	button {
+	.button {
 		margin-top: 1vh;
 		width: 35vw;
 		font-size: 4.5vw;
@@ -335,12 +335,25 @@ button{
 		text-align: center;
 	}
 	
+	.acordeon {
+		width: 85%;
+	}
+	
 	.content-text-accordion {
 		font-size: 4vw;
 	}
 	
 	.acordeon .bloque.activo .contenido {
 		height: 20vw;
+		overflow-y: scroll; /*aactivar el scroll vertical*/
+	}
+	
+	.acordeon .bloque.activo .contenido.height-47{
+		height: 47vw;
+	}
+	
+	.acordeon .bloque.activo .contenido.height-27 {
+		height: 27vw;
 	}
 	/***ACOORDEON***/
 }
