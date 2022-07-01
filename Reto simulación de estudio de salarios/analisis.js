@@ -3,11 +3,7 @@
 */
 
 let incomesArray = [];
-let incomesValuesArray = [];
 let expensesArray = [];
-let expensesValuesArray = [];
-let positionIncomes = 0;
-let positionExpenses = 0;
 
 function appendIncomes(){
 	const nameIncome = document.getElementById("selectIncomeType").value;
@@ -20,9 +16,6 @@ function appendIncomes(){
 				income: nameIncome, 
 				incomeValue: incomeValue
 			});
-
-			incomesValuesArray[positionIncomes] = incomeValue;
-			positionIncomes += 1;
 
 			document.getElementById("selectIncomeType").value = "";
 			document.getElementById("InputIncome").value = "";
@@ -49,9 +42,6 @@ function appendExpenses(){
 				expense: nameExpense, 
 				expenseValue: expenseValue
 			});
-			
-			expensesValuesArray[positionExpenses] = expenseValue;
-			positionExpenses += 1;
 
 			document.getElementById("selectExpensesType").value = "";
 			document.getElementById("InputExpenses").value = "";
@@ -67,7 +57,12 @@ function appendExpenses(){
 }
 
 function summation(valuesList){
-	const total = valuesList.reduce(
+	//obtener un nuevo vector con SOLO numeros
+	let numberArray = valuesList.map(function(newArray) {
+		return newArray.incomeValue;		   
+	});
+	
+	const total = numberArray.reduce(
 		function(previousValue = 0, value){
 			return previousValue + value;
 		}
@@ -78,29 +73,32 @@ function summation(valuesList){
 
 
 function calculateSavingCapacity(){
+	const resultResidue = document.getElementById("resultResidue");
+	
 	//Validar que los vectores de ingresos y egresos NO esten vacios
 	
 	if (incomesArray.length > 0){
-		if (expensesArray.length <= 0){
+		if (expensesArray.length > 0){
 			
 			//Sumar ingresos
-			const totalIncomes = summation(incomesValuesArray);
-			
+			const totalIncomes = summation(incomesArray);
+						
 			//sumar egresos
-			const totalExpenses = summation(expensesValuesArray);
+			const totalExpenses = summation(expensesArray);
 
 			const superavit = totalIncomes - totalExpenses;
-
-			/*const supera = budgetArray.reduce((income, expenses) => { return income - expenses});
-
+			
+			//Escribir html desde js
+    		resultResidue.innerText = `$ ${superavit}`;
+			
 			if (superavit > 0){
+				
 
 			} else if(superavit === 0){
 
 			} else{
 
-			}*/
-			console.log(totalIncomes);
+			}
 			
 		} else{
 			return false;
