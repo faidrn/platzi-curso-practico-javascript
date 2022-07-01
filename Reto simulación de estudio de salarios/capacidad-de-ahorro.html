@@ -7,7 +7,7 @@
     <title>Reto: simulación de estudio de salarios</title>
     <link rel="stylesheet" href="./capacidad_de_ahorro.css">
 </head>
-<body>
+<body class="deactivate-scroll">
     <div class="container">
         <!-- [Video 22] Reto: simulación de estudio de salarios -->
         <!-- https://www.lainformacion.com/economia-negocios-y-finanzas/formula-tasa-calculo-ahorro-cada-mes/2841509/ -->
@@ -70,71 +70,78 @@
                     
                 </form>
             </section>
+			
         </div>
+		
+		<div>
+			<button type="button" onclick="getSuperavit()" class="button">
+				Calcular saldo
+			</button>
+		</div>
 		
 		<div class="result-content">
 			<div class="center">
 				<div class="residue">
 					<p class="paragraph-residue">
-						<strong>Saldo:</strong> <span id="resultResidue">$ 500.000</span>
+						<strong>Saldo:</strong> <span id="resultResidue"></span>
 					</p>
 				</div>
 			</div>
 			
 			<div class="alerts">
-				<div id="savingCapacityOk" class="alert-success alert">
+				<div id="savingCapacityOk" class="alert-success alert hide-alert-success">
 					<strong>¡Felicidades!</strong> Puedes ahorrar el <span id="percentSavings">% de tus ingresos</span>
 				</div>
-				<div id="savingCapacityNotOk" class="alert-danger alert">
+				<div id="savingCapacityNotOk" class="alert-danger alert hide-alert-danger">
 					<strong>¡Malas noticias!</strong> No tienes capacidad de ahorro
 				</div>
-				<div id="savingCapacityMightImprove" class="alert-warning alert">
+				<div id="savingCapacityMightImprove" class="alert-warning alert hide-alert-warning">
 					<strong>¡Alerta!</strong> No tienes capacidad de ahorro, pero puedes mejorar
 				</div>
 			</div>
 			
 		</div>
 		
-		<div class="savings-capacity-tips center">
-				<h2 class="title-tips">Concejos</h2>
+		<div class="savings-capacity-tips center hide-elements hide-alert-info">
+				<h2 class="title-tips hide-elements ">Concejos</h2>
 
-				<p class="paragraph-tips">Puedes seguir estos pasos para empezar tu ahorro: </p>
+				<p class="paragraph-tips hide-elements ">Puedes seguir estos pasos para empezar tu ahorro: </p>
 				
-				<div class="acordeon">
-					<div class="bloque activo">	
-						<h2 class="h2">Consulta tu presupuesto</h2>
-						<p class="contenido">
-							<span class="content-text-accordion">Revisa si ya has incluido todos los gastos o falta algo, si los montos han cambiado.</span>
+				<div class="acordeon hide-elements ">
+					<div class="bloque activo hide-elements ">	
+						<h2 class="h2 hide-elements ">Consulta tu presupuesto</h2>
+						<p class="contenido hide-elements ">
+							<span class="content-text-accordion hide-elements ">Revisa si ya has incluido todos los gastos o falta algo, si los montos han cambiado.</span>
 						</p>
 					</div>
-					<div class="bloque">
-						<h2 class="h2">¿Tienes superávit?</h2>
-						<p class="contenido">
-							<span class="content-text-accordion">Resta los egresos de los ingresos y si te queda dinero, entonces tienes capacidad de ahorro.</span>
+					<div class="bloque hide-elements ">
+						<h2 class="h2 hide-elements ">¿Tienes superávit?</h2>
+						<p class="contenido hide-elements ">
+							<span class="content-text-accordion hide-elements ">Resta los egresos de los ingresos y si te queda dinero, entonces tienes capacidad de ahorro.</span>
 						</p>
 					</div>
-					<div class="bloque">
-						<h2 class="h2">¿Tienes déficit?</h2>
-						<p class="contenido">
-							<span class="content-text-accordion">Haz el mismo cálculo anterior y si no te queda dinero o te falta para cubrir los gastos, entonces no cuentas con capacidad de ahorro.</span>
+					<div class="bloque hide-elements ">
+						<h2 class="h2 hide-elements ">¿Tienes déficit?</h2>
+						<p class="contenido hide-elements ">
+							<span class="content-text-accordion hide-elements ">Haz el mismo cálculo anterior y si no te queda dinero o te falta para cubrir los gastos, entonces no cuentas con capacidad de ahorro.</span>
 						</p>
 					</div>
-					<div class="bloque">
-						<h2 class="h2">Revisa tus gastos</h2>
-						<p class="contenido height-47">
-							<span class="content-text-accordion">El déficit puede ser provocado por un mal manejo de las finanzas; y, no, porque los ingresos no te permitan ahorrar. Revisa tus gastos fijos y variables. Normalmente, en los variables podrás encontrar los gastos hormiga, que tanto afectan la solvencia económica. En los gastos fijos, quizá encuentres suscripciones de pago que ya no usas o que ya no necesitas.</span>
+					<div class="bloque hide-elements ">
+						<h2 class="h2 hide-elements ">Revisa tus gastos</h2>
+						<p class="contenido height-47 hide-elements ">
+							<span class="content-text-accordion hide-elements ">El déficit puede ser provocado por un mal manejo de las finanzas; y, no, porque los ingresos no te permitan ahorrar. Revisa tus gastos fijos y variables. Normalmente, en los variables podrás encontrar los gastos hormiga, que tanto afectan la solvencia económica. En los gastos fijos, quizá encuentres suscripciones de pago que ya no usas o que ya no necesitas.</span>
 						</p>
 					</div>
-					<div class="bloque">
-						<h2 class="h2">Elige un método de ahorro</h2>
-						<p class="contenido height-27">
-							<span class="content-text-accordion">Si quieres desarrollar la cultura del ahorro en tu hogar, te recomendamos escoger un método que te permita ser constante y disciplinado y visualizar tus objetivos a futuro.</span>
+					<div class="bloque hide-elements ">
+						<h2 class="h2 hide-elements ">Elige un método de ahorro</h2>
+						<p class="contenido height-27 hide-elements ">
+							<span class="content-text-accordion hide-elements ">Si quieres desarrollar la cultura del ahorro en tu hogar, te recomendamos escoger un método que te permita ser constante y disciplinado y visualizar tus objetivos a futuro.</span>
 						</p>
 					</div>
-					<div class="bloque">
-						<h2 class="h2">Práctica buenos hábitos</h2>
-						<p class="contenido">
-							<span class="content-text-accordion">Para incrementar tu capacidad de ahorro es fundamental que incluyas buenos hábitos de ahorro en tu día a día.</span>
+					<div class="bloque hide-elements ">
+						<h2 class="h2 hide-elements ">Práctica buenos hábitos</h2>
+						<p class="contenido hide-elements ">
+							<span class="content-text-accordion hide-elements ">Para incrementar tu capacidad de ahorro es fundamental que incluyas buenos hábitos de ahorro en tu día a día.</span>
 						</p>
 					</div>
 				</div>
