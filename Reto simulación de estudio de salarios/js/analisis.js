@@ -139,5 +139,3 @@ function getPercentToSaving(result, total){
 
 	return percent;
 }
-
-vamos a ver si sube así
