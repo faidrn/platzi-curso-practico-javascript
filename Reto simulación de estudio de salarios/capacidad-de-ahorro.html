@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reto: simulación de estudio de salarios</title>
-    <link rel="stylesheet" href="./capacidad_de_ahorro.css">
+    <link rel="stylesheet" href="./css/capacidad_de_ahorro.css">
+	<link rel="stylesheet" href="./css/acordeon.css">
 </head>
-<body class="deactivate-scroll">
+<body>
     <div class="container">
         <!-- [Video 22] Reto: simulación de estudio de salarios -->
         <!-- https://www.lainformacion.com/economia-negocios-y-finanzas/formula-tasa-calculo-ahorro-cada-mes/2841509/ -->
@@ -39,7 +40,7 @@
                     <label for="InputIncome">Ingreso</label>
                     <input type="number" id="InputIncome" required class="input">
         
-                    <button type="button" onclick="appendIncomes()" class="button">
+                    <button type="button" onclick="printData('showIncomesList', 'selectIncomeType', 'InputIncome')" class="button">
                         Agregar
                     </button>
         
@@ -49,9 +50,9 @@
 
             <section class="expenses saving-capacity">
                 <form id="formExpenses">
-                    <h3>Egresos</h3>
+                    <h3>Gastos</h3>
 
-                    <label for="selectExpensesType">Tipo de egreso</label>
+                    <label for="selectExpensesType">Tipo de gasto</label>
                     <select name="selectExpensesType" id="selectExpensesType" required class="select">
                         <option value="">Seleccionar...</option>
                         <option value="Supermercado">Supermercado</option>
@@ -60,10 +61,10 @@
                         <option value="Ocio">Ocio</option>
                     </select>
 					
-                    <label for="InputExpenses">Egreso</label>
+                    <label for="InputExpenses">Gasto</label>
                     <input type="number" id="InputExpenses" required class="input">
         
-                    <button type="button" onclick="appendExpenses()" class="button">
+                    <button type="button" onclick="printData('showExpensesList', 'selectExpensesType', 'InputExpenses')" class="button">
                         Agregar
                     </button>
         
@@ -73,8 +74,8 @@
 			
         </div>
 		
-		<div>
-			<button type="button" onclick="getSuperavit()" class="button">
+		<div class="container-button">
+			<button type="button" onclick="calculateSavingCapacity()" class="button">
 				Calcular saldo
 			</button>
 		</div>
@@ -85,6 +86,16 @@
 					<p class="paragraph-residue">
 						<strong>Saldo:</strong> <span id="resultResidue"></span>
 					</p>
+				</div>
+			</div>
+
+			<div class="budget saving-capacity absolute">
+				<h3>Ingresos</h3>
+				<div class="show-incomes" id="showIncomesList">
+				</div>
+
+				<h3>Gastos</h3>
+				<div class="show-expenses" id="showExpensesList">
 				</div>
 			</div>
 			
@@ -150,7 +161,7 @@
 			
     </div>
 
-    <!-- <script src="./presupuesto.js"></script> -->
-    <script src="./analisis.js"></script>
+	<script src="./js/acordeon.js"></script>
+    <script src="./js/analisis.js"></script>
 </body>
 </html>
