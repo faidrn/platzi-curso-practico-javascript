@@ -75,7 +75,7 @@
         </div>
 		
 		<div class="container-button">
-			<button type="button" onclick="calculateSavingCapacity()" class="button">
+			<button type="button" onclick="calculateSavingCapacity()" class="button" id="buttonCalculateSavingCapacity">
 				Calcular saldo
 			</button>
 		</div>
@@ -101,7 +101,7 @@
 			
 			<div class="alerts">
 				<div id="savingCapacityOk" class="alert-success alert hide-alert-success">
-					<strong>¡Felicidades!</strong> Puedes ahorrar el <span id="percentSavings">% de tus ingresos</span>
+					<strong>¡Felicidades!</strong> Puedes ahorrar el <span id="percentSavings"></span>% de tus ingresos
 				</div>
 				<div id="savingCapacityNotOk" class="alert-danger alert hide-alert-danger">
 					<strong>¡Malas noticias!</strong> No tienes capacidad de ahorro
@@ -114,15 +114,15 @@
 		</div>
 		
 		<div class="savings-capacity-tips center hide-elements hide-alert-info">
-				<h2 class="title-tips hide-elements ">Concejos</h2>
+				<h2 class="title-tips hide-elements">Concejos</h2>
 
 				<p class="paragraph-tips hide-elements ">Puedes seguir estos pasos para empezar tu ahorro: </p>
 				
-				<div class="acordeon hide-elements ">
-					<div class="bloque activo hide-elements ">	
-						<h2 class="h2 hide-elements ">Consulta tu presupuesto</h2>
-						<p class="contenido hide-elements ">
-							<span class="content-text-accordion hide-elements ">Revisa si ya has incluido todos los gastos o falta algo, si los montos han cambiado.</span>
+				<div class="acordeon hide-elements">
+					<div class="bloque activo hide-elements">	
+						<h2 class="h2 hide-elements">Consulta tu presupuesto</h2>
+						<p class="contenido hide-elements">
+							<span class="content-text-accordion hide-elements">Revisa si ya has incluido todos los gastos o falta algo, si los montos han cambiado.</span>
 						</p>
 					</div>
 					<div class="bloque hide-elements ">
